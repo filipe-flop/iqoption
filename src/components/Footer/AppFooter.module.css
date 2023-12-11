@@ -1,0 +1,19 @@
+.appFooter {
+    background-color: #1a202d;
+    color: #8f9199;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 3vh;
+    font-size: 12px;
+    padding-left: 55px;
+    padding-right: 55px;
+}
+
+.hora {
+    color: #8f9199;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-between;
+    margin-left: 10px;
+}

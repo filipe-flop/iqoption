@@ -2,6 +2,7 @@ import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar  } from 'react-pro-side
 import styles from './Sidebar.module.css';
 
 import { GiCrane } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { LuContainer } from "react-icons/lu";
 import { GiCargoCrate } from "react-icons/gi";
 import { FaWarehouse } from "react-icons/fa";
@@ -17,6 +18,7 @@ export const AppSidebar = () => {
             className={styles.sidebar}
             defaultCollapsed='true'
             backgroundColor='#2a3148'
+            width='180px'
         >
             <Menu
                 menuItemStyles={{
@@ -26,7 +28,7 @@ export const AppSidebar = () => {
                         color: disabled ? "#eee" : "#8f9199",
                         backgroundColor: active ? "#fff" : undefined,
                         "&:hover": {
-                            backgroundColor: "#2c3246",
+                            backgroundColor: "#394260",
                             color: "white"
                         },
                         };
@@ -36,7 +38,7 @@ export const AppSidebar = () => {
         >
             <MenuItem 
                 icon={
-                    <GiCrane 
+                    <GiHamburgerMenu 
                         size={30}
                         onClick={() => {
                             collapseSidebar();
@@ -44,7 +46,7 @@ export const AppSidebar = () => {
                     />
                 }
                 
-            > TSSA </MenuItem>
+            >   </MenuItem>
             <MenuItem icon={<GiCargoCrate size={30}/>}> Navio </MenuItem>
             <MenuItem icon={<LuContainer size={30}/>}> Pátio </MenuItem>
             <MenuItem icon={<FaWarehouse size={30}/>}> CFS </MenuItem>

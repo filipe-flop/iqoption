@@ -1,0 +1,13 @@
+.headerDiv {
+    font-size: 24px;
+    font-weight: bold;
+    background: #2a3148;
+    border-bottom: 1px solid #8f9199;
+    height: 5vh;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.headerDiv img {
+    max-height: 75%;
+}
