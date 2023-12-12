@@ -1,8 +1,7 @@
-import { Sidebar, Menu, MenuItem, SubMenu, useProSidebar  } from 'react-pro-sidebar';
+import { Sidebar, Menu, MenuItem, useProSidebar  } from 'react-pro-sidebar';
 import styles from './Sidebar.module.css';
 
-import { GiCrane } from "react-icons/gi";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { Sling as Hamburger } from 'hamburger-react';
 import { LuContainer } from "react-icons/lu";
 import { GiCargoCrate } from "react-icons/gi";
 import { FaWarehouse } from "react-icons/fa";
@@ -18,7 +17,7 @@ export const AppSidebar = () => {
             className={styles.sidebar}
             defaultCollapsed='true'
             backgroundColor='#2a3148'
-            width='180px'
+            width='170px'
         >
             <Menu
                 menuItemStyles={{
@@ -29,7 +28,8 @@ export const AppSidebar = () => {
                         backgroundColor: active ? "#fff" : undefined,
                         "&:hover": {
                             backgroundColor: "#394260",
-                            color: "white"
+                            color: "white",
+                            scale: 1.5,
                         },
                         };
                     }
@@ -38,27 +38,23 @@ export const AppSidebar = () => {
         >
             <MenuItem 
                 icon={
-                    <GiHamburgerMenu 
-                        size={30}
-                        onClick={() => {
-                            collapseSidebar();
-                        }}
-                    />
+                    <div style={{ marginTop: "5px" }}>
+                        <Hamburger
+                            size={20}
+                            onToggle={() => {
+                                collapseSidebar();
+                            }}
+                            rounded
+                        />
+                    </div>
                 }
-                
-            >   </MenuItem>
+                ></MenuItem>
             <MenuItem icon={<GiCargoCrate size={30}/>}> Navio </MenuItem>
             <MenuItem icon={<LuContainer size={30}/>}> Pátio </MenuItem>
             <MenuItem icon={<FaWarehouse size={30}/>}> CFS </MenuItem>
             <MenuItem icon={<LuContainer size={30}/>}> Depot </MenuItem>
             <MenuItem icon={<FaTruckMoving size={30}/>}> Gate </MenuItem>
         </Menu>
-        {/* <Menu className={styles.menu}>
-            <MenuItem className={styles.menuItem} icon={<LuContainer size={24}/>}> Pie charts </MenuItem>
-            <MenuItem> Line charts </MenuItem>
-            <MenuItem> Documentation </MenuItem>
-            <MenuItem> Calendar </MenuItem>
-        </Menu> */}
         </Sidebar>
         </div>
     );
