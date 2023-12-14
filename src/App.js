@@ -1,10 +1,14 @@
 import Page from './pages/Page';
 
+import { ThemeProvider } from './pages/ThemeContext';
+
 function App() {
   return (
-    <div className="App">
-      <Page />
-    </div>
+    <ThemeProvider>
+      <div className="App">
+        <Page />
+      </div>
+    </ThemeProvider>
   );
 }
 

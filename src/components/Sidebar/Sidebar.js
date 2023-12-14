@@ -20,11 +20,6 @@ export const AppSidebar = () => {
 
     const handleItemClick = (path) => {
         navigate(path);
-        // if (sidebarCollapsed) {
-        //     setCollapsed(false); // Mantém a barra lateral fechada se estiver já fechada
-        // } else {
-        //     collapseSidebar(); // Fecha a barra lateral se estiver aberta
-        // }
     };
 
     return (
