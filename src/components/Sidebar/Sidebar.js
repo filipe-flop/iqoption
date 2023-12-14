@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import styles from './Sidebar.module.css';
 
 import { Sling as Hamburger } from 'hamburger-react';
+import { RiShipFill } from "react-icons/ri";
 import { LuContainer } from "react-icons/lu";
 import { GiCargoCrate } from "react-icons/gi";
 import { FaWarehouse } from "react-icons/fa";
@@ -60,8 +61,8 @@ export const AppSidebar = () => {
                     </div>
                 }
                 ></MenuItem>
-            <MenuItem icon={<GiCargoCrate size={30} />} onClick={() => handleItemClick('/navio')}> Navio </MenuItem>
-            <MenuItem icon={<LuContainer size={30} />} onClick={() => handleItemClick('/patio')}> Pátio </MenuItem>
+            <MenuItem icon={<RiShipFill size={30} />} onClick={() => handleItemClick('/navio')}> Navio </MenuItem>
+            <MenuItem icon={<GiCargoCrate size={30} />} onClick={() => handleItemClick('/patio')}> Pátio </MenuItem>
             <MenuItem icon={<FaWarehouse size={30}/>}> CFS </MenuItem>
             <MenuItem icon={<LuContainer size={30}/>}> Depot </MenuItem>
             <MenuItem icon={<FaTruckMoving size={30}/>}> Gate </MenuItem>
