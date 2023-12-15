@@ -1,5 +1,7 @@
 import { Sidebar, Menu, MenuItem, useProSidebar  } from 'react-pro-sidebar';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
+
 import styles from './Sidebar.module.css';
 
 import { Sling as Hamburger } from 'hamburger-react';
@@ -11,13 +13,13 @@ import { FaTruckMoving } from "react-icons/fa";
 
 export const AppSidebar = () => {
 
-    const { sidebarCollapsed, collapseSidebar, setCollapsed } = useProSidebar();
-    const location = useLocation();
+    const { collapseSidebar } = useProSidebar();
+    // const location = useLocation();
     const navigate = useNavigate();
 
-    const isActive = (path) => {
-        return location.pathname === path;
-    };
+    // const isActive = (path) => {
+    //     return location.pathname === path;
+    // };
 
     const handleItemClick = (path) => {
         navigate(path);
@@ -33,7 +35,7 @@ export const AppSidebar = () => {
         >
             <Menu
                 menuItemStyles={{
-                    button: ({ level, active, disabled }) => {
+                    button: ({ level, disabled }) => {
                     if (level === 0) {
                         return {
                         color: disabled ? "#eee" : "#8f9199",
@@ -61,11 +63,39 @@ export const AppSidebar = () => {
                     </div>
                 }
                 ></MenuItem>
-            <MenuItem icon={<RiShipFill size={30} />} onClick={() => handleItemClick('/navio')}> Navio </MenuItem>
-            <MenuItem icon={<GiCargoCrate size={30} />} onClick={() => handleItemClick('/patio')}> Pátio </MenuItem>
-            <MenuItem icon={<FaWarehouse size={30}/>}> CFS </MenuItem>
-            <MenuItem icon={<LuContainer size={30}/>}> Depot </MenuItem>
-            <MenuItem icon={<FaTruckMoving size={30}/>}> Gate </MenuItem>
+
+            <MenuItem 
+                icon={<RiShipFill size={30} />} 
+                onClick={() => handleItemClick('/navio')}
+            >
+                <FormattedMessage id="sidebarNavio" /> 
+            </MenuItem>
+
+            <MenuItem 
+                icon={<GiCargoCrate size={30} />} 
+                onClick={() => handleItemClick('/patio')}
+            > 
+                <FormattedMessage id="sidebarPatio" /> 
+            </MenuItem>
+
+            <MenuItem 
+                icon={<FaWarehouse size={30}/>}
+            >
+                <FormattedMessage id="sidebarCFS" /> 
+            </MenuItem>
+
+            <MenuItem 
+                icon={<LuContainer size={30}/>}
+            >
+                <FormattedMessage id="sidebarDepot" />  
+            </MenuItem>
+
+            <MenuItem 
+                icon={<FaTruckMoving size={30}/>}
+            >
+                <FormattedMessage id="sidebarGate" /> 
+            </MenuItem>
+
         </Menu>
         </Sidebar>
         </div>

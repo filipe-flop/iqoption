@@ -1,6 +1,5 @@
 // ThemeToggleStyles.js
 import styled from 'styled-components';
-import { FaSun, FaMoon } from 'react-icons/fa';
 
 export const StyledButton = styled.button`
   background-color: ${({ isDarkTheme }) => (isDarkTheme ? '#2a3148' : '#ffffff')};

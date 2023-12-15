@@ -3,7 +3,7 @@ import React from 'react';
 import { useTheme } from './ThemeContext';
 import AppSidebar from '../components/Sidebar/Sidebar.js';
 import { ProSidebarProvider } from 'react-pro-sidebar';
-import { Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AppHeader from '../components/Header/AppHeader.jsx';
 import AppFooter from '../components/Footer/AppFooter.jsx';
 import { PageContent } from './PageContent.jsx';

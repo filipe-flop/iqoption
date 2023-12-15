@@ -1,0 +1,14 @@
+{
+    "pt": {
+        "sidebarNavio": "NAVIO",
+        "content": "Olá, mundo!"
+    },
+    "en": {
+        "sidebarNavio": "VESSEL",
+        "content": "Hello, world!"
+    },
+    "es": {
+        "sidebarNavio": "BARCO",
+        "content": "¡Hola, mundo!"
+    }
+}

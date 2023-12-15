@@ -1,5 +1,5 @@
 // ThemeContext.js
-import { createContext, useContext, useState, useMemo } from 'react';
+import { createContext, useContext, useState } from 'react';
 import { IntlProvider } from 'react-intl';
 
 const LanguageContext = createContext();
@@ -22,12 +22,27 @@ export const LanguageProvider = ({ children }) => {
 
   const messages = {
     pt: {
+        sidebarNavio: 'NAVIO',
+        sidebarPatio: 'PÁTIO',
+        sidebarCFS: 'CFS',
+        sidebarDepot: 'DEPOT',
+        sidebarGate: 'GATE',
         content: 'Olá, mundo!',
     },
     en: {
+        sidebarNavio: 'VESSEL',
+        sidebarPatio: 'YARD',
+        sidebarCFS: 'CFS',
+        sidebarDepot: 'DEPOT',
+        sidebarGate: 'GATE',
         content: 'Hello, world!',
     },
     es: {
+        sidebarNavio: 'BARCO',
+        sidebarPatio: 'PATIO',
+        sidebarCFS: 'CFS',
+        sidebarDepot: 'DEPOT',
+        sidebarGate: 'GATE',
         content: '¡Hola, mundo!',
     },
   };
@@ -37,9 +52,9 @@ export const LanguageProvider = ({ children }) => {
     messages: messages[language],
   };
 
-  const intlProviderValue = useMemo(() => {
-    return { ...lang, ...intlConfig };
-  }, [lang, intlConfig]);
+//   const intlProviderValue = useMemo(() => {
+//     return { ...lang, ...intlConfig };
+//   }, [lang, intlConfig]);
 
   return (
     <LanguageContext.Provider value={lang}>
