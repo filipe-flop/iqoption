@@ -1,9 +1,16 @@
 import React from "react";
+import { useLanguage } from './LanguageContext';
+import { FormattedMessage } from 'react-intl';
 
 export const Content1 = () => {
+
+    const { language } = useLanguage();
     return (
         <div>
-            <h1>CONTENT 1</h1>
+            <FormattedMessage
+                id="content"
+                // defaultMessage="Default Greeting"
+            />
         </div>
     );
 }

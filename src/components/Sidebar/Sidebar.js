@@ -37,7 +37,7 @@ export const AppSidebar = () => {
                     if (level === 0) {
                         return {
                         color: disabled ? "#eee" : "#8f9199",
-                        backgroundColor: active ? "#fff" : undefined,
+                        // backgroundColor: active ? "#fff" : undefined,
                         "&:hover": {
                             backgroundColor: "#394260",
                             color: "white",
