@@ -1,9 +1,4 @@
 .sidebar {
     height: 90vh;
-    background-color: red;
-  }
-
-  .pro-menu-item {
-    color: blue;  /* put any color you want */
-    font-weight: 500;
-  }
+    border: none !important;
+}

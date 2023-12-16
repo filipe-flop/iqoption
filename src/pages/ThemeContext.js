@@ -9,7 +9,7 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [isDarkTheme, setIsDarkTheme] = useState(true);
 
   const toggleTheme = () => {
     setIsDarkTheme((prevTheme) => !prevTheme);

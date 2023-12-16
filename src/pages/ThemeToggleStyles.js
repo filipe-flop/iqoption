@@ -2,8 +2,8 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.button`
-  background-color: ${({ isDarkTheme }) => (isDarkTheme ? '#2a3148' : '#ffffff')};
-  color: ${({ isDarkTheme }) => (isDarkTheme ? '#ffffff' : '#000000')};
+  background-color: ${({ isDarkTheme }) => (isDarkTheme ? '#2a3148' : '#F96302')};
+  color: ${({ isDarkTheme }) => (isDarkTheme ? '#ffffff' : '#ffffff')};
   border: 1px solid #8f9199;
   border-radius: 50%;
   

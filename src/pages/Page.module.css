@@ -28,7 +28,7 @@
   background: var(--container-content-background-light);
   color: var(--container-content-text-light);
   flex: 1;
-  border-left: 1px solid var(--border-color);
+  /* border-left: 1px solid var(--border-color); */
 }
 
 .containerFooter {

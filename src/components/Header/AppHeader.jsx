@@ -1,17 +1,22 @@
 import React from "react";
-import styles from './AppHeader.module.css';
+// import styles from './AppHeader.module.css';
+import { StyledHeader } from "./AppHeaderStyled";
 import logo from '../../assets/logobr.png';
 
 import ThemeToggle from '../../pages/ThemeToggle';
-import LanguageToggle from "../../pages/LanguageToggle";
+import LanguageToggle from '../LanguageToggle/LanguageToggle';
+import { useTheme } from '../../pages/ThemeContext';
 
 export const AppHeader = () => {
+
+    const { isDarkTheme } = useTheme();
+    
     return (
-        <header className={styles.headerDiv}>
-             <img src={logo} alt="Logo" />
+        <StyledHeader isDarkTheme={isDarkTheme}>
+             <img src={logo} style={{maxHeight:'75%'}}alt="Logo" />
              <ThemeToggle />
              <LanguageToggle />
-        </header>
+        </StyledHeader>
     );
 }
 

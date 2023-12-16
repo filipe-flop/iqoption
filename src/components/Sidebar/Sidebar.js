@@ -1,6 +1,7 @@
 import { Sidebar, Menu, MenuItem, useProSidebar  } from 'react-pro-sidebar';
 import { useNavigate } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import { useTheme } from '../../pages/ThemeContext';
 
 import styles from './Sidebar.module.css';
 
@@ -16,6 +17,7 @@ export const AppSidebar = () => {
     const { collapseSidebar } = useProSidebar();
     // const location = useLocation();
     const navigate = useNavigate();
+    const { isDarkTheme } = useTheme();
 
     // const isActive = (path) => {
     //     return location.pathname === path;
@@ -25,24 +27,25 @@ export const AppSidebar = () => {
         navigate(path);
     };
 
+    const sidebarBackground = isDarkTheme ? '#2a3148' : '#F96302';
+
     return (
         <div>
         <Sidebar 
-            className={styles.sidebar}
+            className={`${styles.sidebar} no-border-right`}
             defaultCollapsed='true'
-            backgroundColor='#2a3148'
+            backgroundColor={sidebarBackground}
             width='170px'
         >
             <Menu
                 menuItemStyles={{
-                    button: ({ level, disabled }) => {
+                    button: ({ level }) => {
                     if (level === 0) {
                         return {
-                        color: disabled ? "#eee" : "#8f9199",
-                        // backgroundColor: active ? "#fff" : undefined,
+                            color: isDarkTheme ? "#8f9199" : "white",
                         "&:hover": {
-                            backgroundColor: "#394260",
-                            color: "white",
+                            backgroundColor: isDarkTheme ? "#394260" : "#FD8535",
+                            color: isDarkTheme ? "white" : "#8f9199",
                             scale: 1.5,
                         },
                         };
