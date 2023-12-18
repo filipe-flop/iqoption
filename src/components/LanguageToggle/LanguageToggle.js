@@ -1,6 +1,6 @@
 // LanguageToggle.js
 import React from 'react';
-import { useLanguage } from '../../pages/LanguageContext';
+import { useLanguage } from '../../context/LanguageContext';
 import styles from './LanguageToggle.module.css';
 
 import ReactCountryFlag from "react-country-flag"
@@ -15,10 +15,10 @@ const LanguageToggle = () => {
           countryCode="BR"
           svg
           style={{
-              width: '2em',
-              height: '2em',
-              borderRadius: '50%',
-              border: '1px solid #8f9199',
+              width: '1.5em',
+              height: '1.5em',
+              // borderRadius: '50%',
+              // border: '1px solid #8f9199',
           }}
           title="BR"
           />
@@ -28,15 +28,15 @@ const LanguageToggle = () => {
           countryCode="US"
           svg
           style={{
-              width: '2em',
-              height: '2em',
-              borderRadius: '50%',
-              border: '1px solid #8f9199',
+            width: '1.5em',
+            height: '1.5em',
+              // borderRadius: '50%',
+              // border: '1px solid #8f9199',
           }}
           title="US"
         />
       </button>
-      <button onClick={() => changeLanguage('es')}>
+      {/* <button onClick={() => changeLanguage('es')}>
         <ReactCountryFlag
           countryCode="ES"
           svg
@@ -48,7 +48,7 @@ const LanguageToggle = () => {
           }}
           title="ES"
         />
-      </button>
+      </button> */}
     </div>
   );
 };

@@ -1,3 +1,20 @@
 .clock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    /* padding-left: 5px; */
+}
+
+.clockLabel {
+    color: #8f9199;
+}
+
+.clockTime {
     color: white;
+    padding: 5px;
+}
+
+.clockTimezone {
+    color: #8f9199;
 }

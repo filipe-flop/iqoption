@@ -1,6 +1,6 @@
 // ThemeToggle.js
 import React from 'react';
-import { useTheme } from './ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 import { StyledButton } from './ThemeToggleStyles';
 import { FaSun, FaMoon } from 'react-icons/fa';
 

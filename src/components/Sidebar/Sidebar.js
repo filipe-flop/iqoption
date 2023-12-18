@@ -1,7 +1,7 @@
 import { Sidebar, Menu, MenuItem, useProSidebar  } from 'react-pro-sidebar';
 import { useNavigate } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import { useTheme } from '../../pages/ThemeContext';
+import { useTheme } from '../../context/ThemeContext';
 
 import styles from './Sidebar.module.css';
 

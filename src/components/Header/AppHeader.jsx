@@ -3,9 +3,9 @@ import React from "react";
 import { StyledHeader } from "./AppHeaderStyled";
 import logo from '../../assets/logobr.png';
 
-import ThemeToggle from '../../pages/ThemeToggle';
-import LanguageToggle from '../LanguageToggle/LanguageToggle';
-import { useTheme } from '../../pages/ThemeContext';
+import ThemeToggle from '../ThemeToggle/ThemeToggle';
+// import LanguageToggle from '../LanguageToggle/LanguageToggle';
+import { useTheme } from '../../context/ThemeContext';
 
 export const AppHeader = () => {
 
@@ -15,7 +15,7 @@ export const AppHeader = () => {
         <StyledHeader isDarkTheme={isDarkTheme}>
              <img src={logo} style={{maxHeight:'75%'}}alt="Logo" />
              <ThemeToggle />
-             <LanguageToggle />
+             {/* <LanguageToggle /> */}
         </StyledHeader>
     );
 }

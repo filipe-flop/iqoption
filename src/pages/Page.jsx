@@ -1,6 +1,6 @@
 // Page.js
 import React from 'react';
-import { useTheme } from './ThemeContext';
+import { useTheme } from '../context/ThemeContext.js';
 import AppSidebar from '../components/Sidebar/Sidebar.js';
 import { ProSidebarProvider } from 'react-pro-sidebar';
 import { Route, Routes } from 'react-router-dom';

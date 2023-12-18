@@ -1,7 +1,7 @@
 import Page from './pages/Page';
 
-import { ThemeProvider } from './pages/ThemeContext';
-import { LanguageProvider } from './pages/LanguageContext';
+import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
 
 function App() {
   return (

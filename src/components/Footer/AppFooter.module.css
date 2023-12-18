@@ -6,8 +6,12 @@
     justify-content: space-between;
     max-height: 3vh;
     font-size: 12px;
-    padding-left: 55px;
+    padding-left: 10px;
     padding-right: 55px;
+}
+
+.appFooter p {
+    padding-left: 5px;
 }
 
 .hora {
