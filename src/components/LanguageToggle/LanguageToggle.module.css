@@ -1,5 +1,12 @@
+/* LanguageToggle.module.css */
+
 .languageDiv button {
     border: none;
     background: none;
     cursor: pointer;
+}
+
+.languageDiv button.selected {
+    border: 1px solid #8f9199;
+    padding: 0px;
 }

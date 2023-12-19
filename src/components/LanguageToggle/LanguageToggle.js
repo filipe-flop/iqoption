@@ -2,38 +2,39 @@
 import React from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import styles from './LanguageToggle.module.css';
-
-import ReactCountryFlag from "react-country-flag"
+import ReactCountryFlag from 'react-country-flag';
 
 const LanguageToggle = () => {
-  const { changeLanguage } = useLanguage();
+  const { language, changeLanguage } = useLanguage();
 
   return (
     <div className={styles.languageDiv}>
-      <button onClick={() => changeLanguage('pt')}>
+      <button
+        onClick={() => changeLanguage('pt')}
+        className={language === 'pt' ? styles.selected : ''}
+      >
         <ReactCountryFlag
           countryCode="BR"
           svg
           style={{
-              width: '1.5em',
-              height: '1.5em',
-              // borderRadius: '50%',
-              // border: '1px solid #8f9199',
+            width: '1.5em',
+            height: '1.5em',
           }}
-          title="BR"
-          />
+          title="PT"
+        />
       </button>
-      <button onClick={() => changeLanguage('en')}>
+      <button
+        onClick={() => changeLanguage('en')}
+        className={language === 'en' ? styles.selected : ''}
+      >
         <ReactCountryFlag
           countryCode="US"
           svg
           style={{
             width: '1.5em',
             height: '1.5em',
-              // borderRadius: '50%',
-              // border: '1px solid #8f9199',
           }}
-          title="US"
+          title="EN"
         />
       </button>
       {/* <button onClick={() => changeLanguage('es')}>
