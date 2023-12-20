@@ -27,7 +27,7 @@ export const AppSidebar = () => {
         navigate(path);
     };
 
-    const sidebarBackground = isDarkTheme ? '#2a3148' : '#F96302';
+    const sidebarBackground = isDarkTheme ? '#2a3148' : '#8f9199';
 
     return (
         <div>
@@ -44,8 +44,8 @@ export const AppSidebar = () => {
                         return {
                             color: isDarkTheme ? "#8f9199" : "white",
                         "&:hover": {
-                            backgroundColor: isDarkTheme ? "#394260" : "#FD8535",
-                            color: isDarkTheme ? "white" : "#8f9199",
+                            backgroundColor: isDarkTheme ? "#394260" : "#B0B0B0",
+                            color: isDarkTheme ? "white" : "#F96302",
                             scale: 1.5,
                         },
                         };

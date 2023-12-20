@@ -1,16 +1,30 @@
-// ThemeToggle.js
 import React from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { StyledButton } from './ThemeToggleStyles';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import Switch from '@mui/material/Switch';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { FaMoon } from "react-icons/fa";
+import { FaSun } from "react-icons/fa6";
 
 const ThemeToggle = () => {
   const { isDarkTheme, toggleTheme } = useTheme();
 
+  const theme = createTheme({
+    palette: {
+      mode: isDarkTheme ? 'dark' : 'light',
+    },
+  });
+
   return (
-    <StyledButton isDarkTheme={isDarkTheme} onClick={toggleTheme}>
-      {isDarkTheme ? <FaSun size={20}/> : <FaMoon size={20}/>}
-    </StyledButton>
+    <ThemeProvider theme={theme}>
+      <Switch
+        checked={isDarkTheme}
+        onChange={toggleTheme}
+        color="default"
+        icon={<FaSun size={19} />}
+        checkedIcon={<FaMoon size={19} style={{ transform: 'scaleX(-1)' }} />}
+        size="26"
+      />
+    </ThemeProvider>
   );
 };
 

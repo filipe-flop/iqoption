@@ -6,7 +6,8 @@ export const StyledHeader = styled.header`
     align-items: center;
     font-size: 24px;
     font-weight: bold;
-    background: ${({ isDarkTheme }) => (isDarkTheme ? '#2a3148' : '#F96302')};
+    background: ${({ isDarkTheme }) => 
+        (isDarkTheme ? '#2a3148' : 'linear-gradient(to left, #FF7821, #F96302)')};
     border-bottom: 1px solid #8f9199;
     height: 5vh;
     padding-left: 10px;
