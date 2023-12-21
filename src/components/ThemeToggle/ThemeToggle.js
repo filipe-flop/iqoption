@@ -20,8 +20,8 @@ const ThemeToggle = () => {
         checked={isDarkTheme}
         onChange={toggleTheme}
         color="default"
-        icon={<FaSun size={19} />}
-        checkedIcon={<FaMoon size={19} style={{ transform: 'scaleX(-1)' }} />}
+        icon={<FaSun size={19}/>}
+        checkedIcon={<FaMoon size={19} color='white' style={{ transform: 'scaleX(-1)' }} />}
         size="26"
       />
     </ThemeProvider>

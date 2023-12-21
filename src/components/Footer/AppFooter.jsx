@@ -1,27 +1,34 @@
+// AppFooter.js
 import React from "react";
-import styles from './AppFooter.module.css';
-
+import {
+  FooterContainer,
+  RightContainer,
+  SupportButtonContainer,
+  ClockContainer,
+} from './AppFooterStyled';
 import Clock from "../Clock/Clock";
 import LanguageToggle from '../LanguageToggle/LanguageToggle';
 import SupportButton from "../SupportButton/SupportButton";
+import { useTheme } from '../../context/ThemeContext';
 
-export const AppFooter = () => {
-    return (
-        <footer className={styles.appFooter}>
-            <div>
-                {/* <p>&copy; 2023</p> */}
-                <LanguageToggle />
-            </div>
-            <div className={styles.containerRight}>
-                <div className={styles.hora}>
-                    <Clock />
-                </div>
-                <div className={styles.supButton}>
-                    <SupportButton />
-                </div>
-            </div>
-        </footer>
-    );
+const AppFooter = () => {
+    const { isDarkTheme } = useTheme();
+
+  return (
+    <FooterContainer isDarkTheme={isDarkTheme}>
+      <div>
+        <LanguageToggle />
+      </div>
+      <RightContainer>
+        <ClockContainer>
+          <Clock />
+        </ClockContainer>
+        <SupportButtonContainer>
+          <SupportButton />
+        </SupportButtonContainer>
+      </RightContainer>
+    </FooterContainer>
+  );
 }
 
 export default AppFooter;
