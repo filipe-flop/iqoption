@@ -35,6 +35,7 @@ export const LanguageProvider = ({ children }) => {
       sidebarGate: 'GATE',
       content: 'Olá, mundo!',
       clock: 'HORA ATUAL:',
+      supButton: 'SUPORTE'
     },
     en: {
       sidebarNavio: 'VESSEL',
@@ -44,6 +45,7 @@ export const LanguageProvider = ({ children }) => {
       sidebarGate: 'GATE',
       content: 'Hello, world!',
       clock: 'CURRENT TIME:',
+      supButton: 'SUPPORT'
     },
     // es: {
     //     sidebarNavio: 'BARCO',

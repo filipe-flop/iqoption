@@ -1,0 +1,20 @@
+.supButtonStyle {
+    background-color: #ca522c;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 10px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.supButtonStyle:hover {
+    background-color: #9d452d;
+}
+
+.supButtonText {
+    margin-left: 5px;
+}
