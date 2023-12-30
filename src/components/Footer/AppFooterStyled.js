@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const FooterContainer = styled.footer`
   background: ${({ isDarkTheme }) => 
-        (isDarkTheme ? '#1a202d' : '#2e2e2e')};
+        (isDarkTheme ? '#1a202d' : '#999999')};
   color: #8f9199;
   display: flex;
   align-items: center;
@@ -28,7 +28,6 @@ export const SupportButtonContainer = styled.div`
 `;
 
 export const ClockContainer = styled.div`
-  color: #8f9199;
   display: flex;
   align-items: center;
   justify-content: space-between;

@@ -11,6 +11,7 @@ import { LuContainer } from "react-icons/lu";
 import { GiCargoCrate } from "react-icons/gi";
 import { FaWarehouse } from "react-icons/fa";
 import { FaTruckMoving } from "react-icons/fa";
+import { useState } from 'react';
 
 export const AppSidebar = () => {
 
@@ -18,6 +19,7 @@ export const AppSidebar = () => {
     // const location = useLocation();
     const navigate = useNavigate();
     const { isDarkTheme } = useTheme();
+    const [active, setActive] = useState(false);
 
     // const isActive = (path) => {
     //     return location.pathname === path;
@@ -25,9 +27,12 @@ export const AppSidebar = () => {
 
     const handleItemClick = (path) => {
         navigate(path);
+        setActive(true);
+        console.log(active);
     };
 
-    const sidebarBackground = isDarkTheme ? '#2a3148' : '#8f9199';
+    // const sidebarBackground = isDarkTheme ? '#2a3148' : '#8f9199';
+    const sidebarBackground = isDarkTheme ? '#2a3148' : 'white';
 
     return (
         <div>
@@ -42,9 +47,10 @@ export const AppSidebar = () => {
                     button: ({ level }) => {
                     if (level === 0) {
                         return {
-                            color: isDarkTheme ? "#8f9199" : "white",
+                            // color: isDarkTheme ? "#8f9199" : "white",
+                            color: "#8f9199",
                         "&:hover": {
-                            backgroundColor: isDarkTheme ? "#394260" : "#B0B0B0",
+                            backgroundColor: isDarkTheme ? "#394260" : "#e2e2e2",
                             color: isDarkTheme ? "white" : "#F96302",
                             scale: 1.5,
                         },

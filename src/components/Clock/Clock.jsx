@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import styles from './Clock.module.css';
+import { ClockGeral, ClockLabel, ClockTime, ClockTimezone } from './ClockStyled';
 
 import { FormattedMessage } from 'react-intl';
 import { useLanguage } from '../../context/LanguageContext';
+import { useTheme } from '../../context/ThemeContext';
 
 const Clock = () => {
   const { language } = useLanguage();
   const [dateTime, setDateTime] = useState(getCurrentDateTime(language));
+  const { isDarkTheme } = useTheme();
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -38,17 +40,17 @@ const Clock = () => {
   }
 
   return (
-    <div className={styles.clock}>
-      <div className={styles.clockLabel}>
+    <ClockGeral >
+      <ClockLabel isDarkTheme={isDarkTheme}>
         <FormattedMessage id="clock"/>
-      </div>
-      <div className={styles.clockTime}>
+      </ClockLabel>
+      <ClockTime>
         {dateTime}
-      </div>
-      <div className={styles.clockTimezone}>
+      </ClockTime>
+      <ClockTimezone isDarkTheme={isDarkTheme}>
         (UTC-3)
-      </div>
-    </div>
+      </ClockTimezone>
+    </ClockGeral>
   );
 };
 
